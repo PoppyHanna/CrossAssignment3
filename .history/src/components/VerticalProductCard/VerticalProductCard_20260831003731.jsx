@@ -73,11 +73,11 @@ const styles = StyleSheet.create({
     },
     
     imagePortrait: {
-        height: 155,
+        height: 120,
     },
 
     imageLandscape: {
-        height: 133,
+        height: 125,
     },
 
     content: {
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'flex-start',
-        gap: 6,
+        gap: 8,
     },
 
     priceRow: {
@@ -103,14 +103,14 @@ const styles = StyleSheet.create({
 
     title: {
         flex: 1,
-        fontSize: 16,
+        fontSize: 12,
         fontWeight: '600',
         lineHeight: 16,
         color: COLORS.textTertiary,
     },
 
     price: {
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: '600',
         color: COLORS.textTertiary,
     },

@@ -14,7 +14,7 @@ const SearchInput = ({value, onChangeText, placeholder = 'Search for coffee...'}
                 size={18}
                 color={COLORS.textSecondary}
             />
-
+            
             <TextInput
                 style={styles.input}
                 placeholder={placeholder}
@@ -28,33 +28,20 @@ const SearchInput = ({value, onChangeText, placeholder = 'Search for coffee...'}
 
 
 const styles = StyleSheet.create({
-    // container: {
-    //     width: '100%',
-    //     height: 48,
-    //     marginBottom: 24,
-        
-    //     backgroundColor: COLORS.white,
-    //     borderRadius: 14,
-        
-    //     ...SHADOWS.default,
-    // },
-
     container: {
         width: '100%',
         height: 48,
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: 8,
-        paddingHorizontal: 16,
         marginBottom: 24,
+        
         backgroundColor: COLORS.white,
         borderRadius: 14,
+        
         ...SHADOWS.default,
     },
 
     input: {
         flex: 1,
-        paddingHorizontal: 8,
+        paddingHorizontal: 16,
         paddingVertical: 0,
 
         color: COLORS.textTertiary,

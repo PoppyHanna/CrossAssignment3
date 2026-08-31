@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     },
 
     price: {
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: '600',
         color: COLORS.textTertiary,
     },

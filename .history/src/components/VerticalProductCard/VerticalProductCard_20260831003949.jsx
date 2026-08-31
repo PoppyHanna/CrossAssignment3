@@ -103,14 +103,14 @@ const styles = StyleSheet.create({
 
     title: {
         flex: 1,
-        fontSize: 16,
+        fontSize: 12,
         fontWeight: '600',
         lineHeight: 16,
         color: COLORS.textTertiary,
     },
 
     price: {
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: '600',
         color: COLORS.textTertiary,
     },

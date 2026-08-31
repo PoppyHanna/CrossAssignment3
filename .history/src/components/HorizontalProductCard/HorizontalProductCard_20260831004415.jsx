@@ -2,19 +2,18 @@ import { Image, StyleSheet, Text, TouchableOpacity, View, useWindowDimensions } 
 
 import MaterialCommunityIcons from '@react-native-vector-icons/material-design-icons/static';
 
-import { COLORS } from '../../constants/colors';
+import {COLORS} from '../../constants/colors';
 import { SHADOWS } from '../../constants/shadows';
 
-const VerticalProductCard = ({
+const HorizontalProductCard = ({
     image,
-    title,
+    title, 
     price,
     onPress
 }) => {
-    
     const { width } = useWindowDimensions();
 
-    // Adjust image height for portrait and landscape screen orientations.
+    // Use a slightly wider image on larger screens.
     const isLandscape = width > 600;
 
     return (
@@ -22,6 +21,7 @@ const VerticalProductCard = ({
             style={styles.card}
             onPress={onPress}
             activeOpacity={0.8}>
+        
             <Image
                 source={image}
                 style={[
@@ -29,17 +29,17 @@ const VerticalProductCard = ({
                     isLandscape ? styles.imageLandscape : styles.imagePortrait,
                 ]}
                 resizeMode="cover" />
-
+            
             <View style={styles.content}>
                 <View style={styles.titleRow}>
                     <Text style={styles.title} numberOfLines={2}>
-                        {title}
+                    {title}
                     </Text>
 
                     <MaterialCommunityIcons
-                        name="heart-outline"
-                        size={18}
-                        color={COLORS.primaryBrown}
+                    name="heart-outline"
+                    size={18}
+                    color={COLORS.primaryBrown}
                     />
                 </View>
 
@@ -47,21 +47,20 @@ const VerticalProductCard = ({
                     <Text style={styles.price}>${price}</Text>
 
                     <MaterialCommunityIcons
-                        name="plus"
-                        size={22}
-                        color={COLORS.primaryBrown}
+                    name="plus"
+                    size={22}
+                    color={COLORS.primaryBrown}
                     />
                 </View>
             </View>
-
         </TouchableOpacity>
     );
 }
 
 const styles = StyleSheet.create({
     card: {
-        // Keeps two equal cards in one row with space between them.
-        width: '47%',
+        width: '100%',
+        flexDirection: 'row',
         backgroundColor: COLORS.lightBeige,
         borderRadius: 14,
         overflow: 'hidden',
@@ -69,22 +68,21 @@ const styles = StyleSheet.create({
     },
 
     image: {
-        width: '100%',
+        height: 133,   
     },
-    
+
     imagePortrait: {
-        height: 155,
+        width: 145,
     },
 
     imageLandscape: {
-        height: 133,
+        width: 180,
     },
 
     content: {
-        height: 100,
-        paddingHorizontal: 10,
-        paddingVertical: 10,
-        paddingBottom: 8,
+        flex: 1,
+        paddingHorizontal: 16,
+        paddingVertical: 16,
         justifyContent: 'space-between',
     },
 
@@ -92,29 +90,22 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'flex-start',
-        gap: 6,
-    },
-
-    priceRow: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        gap: 8,
     },
 
     title: {
         flex: 1,
         fontSize: 16,
         fontWeight: '600',
-        lineHeight: 16,
+        lineHeight: 20,
         color: COLORS.textTertiary,
     },
 
     price: {
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: '600',
         color: COLORS.textTertiary,
     },
-            
 });
 
-export default VerticalProductCard;
+export default HorizontalProductCard;

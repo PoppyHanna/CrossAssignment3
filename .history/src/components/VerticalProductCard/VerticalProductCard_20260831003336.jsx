@@ -29,30 +29,33 @@ const VerticalProductCard = ({
                     isLandscape ? styles.imageLandscape : styles.imagePortrait,
                 ]}
                 resizeMode="cover" />
+            
+            {/* <View style={styles.content}>
+                <Text style={styles.title} numberOfLines={2}>{title}</Text>
+                <Text style={styles.price}>${price}</Text>
+            </View> */}
+            <View style={styles.titleRow}>
+                <Text style={styles.title} numberOfLines={2}>
+                    {title}
+                </Text>
 
-            <View style={styles.content}>
-                <View style={styles.titleRow}>
-                    <Text style={styles.title} numberOfLines={2}>
-                        {title}
-                    </Text>
-
-                    <MaterialCommunityIcons
-                        name="heart-outline"
-                        size={18}
-                        color={COLORS.primaryBrown}
-                    />
-                </View>
-
-                <View style={styles.priceRow}>
-                    <Text style={styles.price}>${price}</Text>
-
-                    <MaterialCommunityIcons
-                        name="plus"
-                        size={22}
-                        color={COLORS.primaryBrown}
-                    />
-                </View>
+                <MaterialCommunityIcons
+                    name="heart-outline"
+                    size={18}
+                    color={COLORS.primaryBrown}
+                />
             </View>
+
+            <View style={styles.priceRow}>
+                <Text style={styles.price}>${price}</Text>
+
+                <MaterialCommunityIcons
+                    name="plus"
+                    size={22}
+                    color={COLORS.primaryBrown}
+                />
+            </View>
+
 
         </TouchableOpacity>
     );
@@ -73,26 +76,25 @@ const styles = StyleSheet.create({
     },
     
     imagePortrait: {
-        height: 155,
+        height: 120,
     },
 
     imageLandscape: {
-        height: 133,
+        height: 125,
     },
 
-    content: {
-        height: 100,
-        paddingHorizontal: 10,
-        paddingVertical: 10,
-        paddingBottom: 8,
-        justifyContent: 'space-between',
-    },
+    // content: {
+    //     height: 86,
+    //     paddingHorizontal: 12,
+    //     paddingVertical: 10,
+    //     justifyContent: 'space-between',
+    // },
 
     titleRow: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'flex-start',
-        gap: 6,
+        gap: 8,
     },
 
     priceRow: {
@@ -103,14 +105,14 @@ const styles = StyleSheet.create({
 
     title: {
         flex: 1,
-        fontSize: 16,
+        fontSize: 12,
         fontWeight: '600',
         lineHeight: 16,
         color: COLORS.textTertiary,
     },
 
     price: {
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: '600',
         color: COLORS.textTertiary,
     },

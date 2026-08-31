@@ -57,6 +57,12 @@ const styles = StyleSheet.create({
         fontWeight: '400',
     },
 
+    // arrow: {
+    //     color: COLORS.background,
+    //     fontSize: 24,
+    //     fontWeight: '600',
+    // },
+
 });
 
 export default PromoCodeInput;

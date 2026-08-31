@@ -1,4 +1,4 @@
-import { StyleSheet, TouchableOpacity, TextInput, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, TextInput, View } from 'react-native';
 
 import MaterialCommunityIcons from '@react-native-vector-icons/material-design-icons/static';
 
@@ -55,6 +55,12 @@ const styles = StyleSheet.create({
         color: COLORS.background,
         fontSize: 12,
         fontWeight: '400',
+    },
+
+    arrow: {
+        color: COLORS.background,
+        fontSize: 24,
+        fontWeight: '600',
     },
 
 });

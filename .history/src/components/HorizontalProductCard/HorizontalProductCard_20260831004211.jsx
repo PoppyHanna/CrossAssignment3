@@ -31,31 +31,8 @@ const HorizontalProductCard = ({
                 resizeMode="cover" />
             
             <View style={styles.content}>
-                <View style={styles.titleRow}>
-                    <Text
-                        style={styles.title}
-                        numberOfLines={2}
-                        ellipssizeMode="tail"
-                    >
-                    {title}
-                    </Text>
-
-                    <MaterialCommunityIcons
-                    name="heart-outline"
-                    size={18}
-                    color={COLORS.primaryBrown}
-                    />
-                </View>
-
-                <View style={styles.priceRow}>
-                    <Text style={styles.price}>${price}</Text>
-
-                    <MaterialCommunityIcons
-                    name="plus"
-                    size={22}
-                    color={COLORS.primaryBrown}
-                    />
-                </View>
+                <Text style={styles.title}>{title}</Text>
+                <Text style={styles.price}>${price}</Text>
             </View>
         </TouchableOpacity>
     );
@@ -86,34 +63,19 @@ const styles = StyleSheet.create({
     content: {
         flex: 1,
         paddingHorizontal: 16,
-        paddingVertical: 16,
+        paddingVertical: 18,
         justifyContent: 'space-between',
-    },
-
-    titleRow: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'flex-start',
-        gap: 8,
     },
 
     title: {
-        flex: 1,
-        maxWidth: '82%',
         fontSize: 16,
         fontWeight: '600',
         lineHeight: 20,
         color: COLORS.textTertiary,
     },
 
-    priceRow: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-    },
-
     price: {
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: '600',
         color: COLORS.textTertiary,
     },

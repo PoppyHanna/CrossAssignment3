@@ -1,5 +1,4 @@
-import { StyleSheet, TouchableOpacity, TextInput, View } from 'react-native';
-
+import { StyleSheet, Text, TouchableOpacity, TextInput, View } from 'react-native';
 import MaterialCommunityIcons from '@react-native-vector-icons/material-design-icons/static';
 
 import { COLORS } from '../../constants/colors';
@@ -22,11 +21,7 @@ function PromoCodeInput({ value, onChangeText, onSubmit, placeholder = 'Enter pr
                 onPress={onSubmit}
                 activeOpacity={0.8}
             >
-            <MaterialCommunityIcons
-                name="chevron-right"
-                size={28}
-                color={COLORS.white}
-            />
+                <Text style={styles.arrow}>→</Text>
             </TouchableOpacity>
         </View>
     );
@@ -55,6 +50,12 @@ const styles = StyleSheet.create({
         color: COLORS.background,
         fontSize: 12,
         fontWeight: '400',
+    },
+
+    arrow: {
+        color: COLORS.background,
+        fontSize: 24,
+        fontWeight: '600',
     },
 
 });

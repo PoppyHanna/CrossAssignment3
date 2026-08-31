@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         gap: 8,
-        paddingHorizontal: 16,
+        paddingHorizontal: 8,
         marginBottom: 24,
         backgroundColor: COLORS.white,
         borderRadius: 14,
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
 
     input: {
         flex: 1,
-        paddingHorizontal: 8,
+        paddingHorizontal: 16,
         paddingVertical: 0,
 
         color: COLORS.textTertiary,
