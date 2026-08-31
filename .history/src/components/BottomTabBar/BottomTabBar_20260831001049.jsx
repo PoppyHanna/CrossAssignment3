@@ -7,9 +7,9 @@ import { SHADOWS } from '../../constants/shadows';
 
 const tabs = [
     {name: 'Home', icon: 'storefront'},
-    {name: 'Menu', icon: 'view-grid'},
-    {name: 'Cart', icon: 'cart'},
-    {name: 'Profile', icon: 'account'},
+    {name: 'Menu', icon: 'silverware-fork-knife'},
+    {name: 'Cart', icon: 'cart-outline'},
+    {name: 'Profile', icon: 'account-outline'},
 ];
 
 const BottomTabBar = ({ activeTab, onTabPress }) => {

@@ -6,10 +6,10 @@ import {COLORS} from '../../constants/colors';
 import { SHADOWS } from '../../constants/shadows';
 
 const tabs = [
-    {name: 'Home', icon: 'storefront'},
-    {name: 'Menu', icon: 'view-grid'},
-    {name: 'Cart', icon: 'cart'},
-    {name: 'Profile', icon: 'account'},
+    {name: 'Home', icon: 'home-outline'},
+    {name: 'Menu', icon: 'silverware-fork-knife'},
+    {name: 'Cart', icon: 'cart-outline'},
+    {name: 'Profile', icon: 'account-outline'},
 ];
 
 const BottomTabBar = ({ activeTab, onTabPress }) => {
@@ -22,19 +22,19 @@ const BottomTabBar = ({ activeTab, onTabPress }) => {
                 
                 return (
                     <TouchableOpacity
-                        key={tab.name}
+                        key={tab}
                         style={styles.tab}
-                        onPress={() => onTabPress(tab.name)}
+                        onPress={() => onTabPress(tab)}
                         activeOpacity={0.8}
                     >
                         <MaterialCommunityIcons
-                            name={tab.icon}
-                            size={22}
-                            color={isActive ? COLORS.primaryBrown : COLORS.textSecondary}
+                            name="home-outline"
+                            size={24}
+                            color={COLORS.primaryBrown}
                         />
 
                         <Text style={[styles.tabText, isActive && styles.activeTabText]}>
-                            {tab.name}
+                            {tab}
                         </Text>
                     </TouchableOpacity>
                 );  
@@ -60,7 +60,6 @@ const styles = StyleSheet.create({
         height: '100%',
         alignItems: 'center',
         justifyContent: 'center',
-        gap: 4,
     },
 
     tabText: {
