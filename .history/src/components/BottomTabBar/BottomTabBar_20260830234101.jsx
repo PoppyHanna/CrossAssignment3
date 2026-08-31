@@ -1,5 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 import {COLORS} from '../../constants/colors';
 import { SHADOWS } from '../../constants/shadows';
 
@@ -19,7 +21,11 @@ const BottomTabBar = ({ activeTab, onTabPress }) => {
                         onPress={() => onTabPress(tab)}
                         activeOpacity={0.8}
                     >
-
+                        <MaterialCommunityIcons
+                            name="home-outline"
+                            size={24}
+                            color={COLORS.primaryBrown}
+                        />
 
                         <Text style={[styles.tabText, isActive && styles.activeTabText]}>
                             {tab}

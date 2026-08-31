@@ -1,5 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 import {COLORS} from '../../constants/colors';
 import { SHADOWS } from '../../constants/shadows';
 
@@ -18,9 +20,7 @@ const BottomTabBar = ({ activeTab, onTabPress }) => {
                         style={styles.tab}
                         onPress={() => onTabPress(tab)}
                         activeOpacity={0.8}
-                    >
-
-
+                        >
                         <Text style={[styles.tabText, isActive && styles.activeTabText]}>
                             {tab}
                         </Text>
